@@ -63,8 +63,8 @@ export default createStore({
         commit('setLngLat', { lng: longitude, lat: latitude });
         const resp = await gasStationApi.get('/list.php', {
           params: {
-            lat: longitude,
-            lng: latitude,
+            lat: latitude,
+            lng: longitude,
             rad: '25',
             sort: 'dist',
             type: type || 'all',
